@@ -71,12 +71,20 @@ public class Main {
                     break;
                 }
                 case 0:{
+                    utili.dimi();
                     rodando =false;
                     break;
                 }
+                default:
+                    utili.dimi();
+                    System.out.println("Opção inválida! Tente novamente.");
+                    System.out.println("Pressione Enter para continuar...");
+                    ler.nextLine();
+                    break;
+
             }
         }
-        System.out.println("total a pagar: "+ totalapagar);
+        System.out.printf("Total a pagar: R$ %.2f%n", totalapagar);
     }
 
 

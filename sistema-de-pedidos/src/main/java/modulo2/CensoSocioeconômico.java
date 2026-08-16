@@ -9,7 +9,7 @@ public class CensoSocioeconômico {
         double mediasalrial = 0;
         double somaSalarios = 0;
         int totalPessoas = 0;
-        double mulheresSalarioAlto = 0;
+        int mulheresSalarioAlto = 0;
         int maiordiade = 0;
         int menoridade = 999;
         double totalapagar = 0;
@@ -29,13 +29,14 @@ public class CensoSocioeconômico {
             ler.nextLine();
             switch (opcao){
                 case 1: {
-                    totalapagar++;
+
                     utili.dimi();
                     System.out.println("Digite sua idade: ");
                     int idade = ler.nextInt();
 
 
                     if(idade >= 18) {
+                        totalPessoas++;
                         if (idade > maiordiade){
                             maiordiade = idade;
                         }
@@ -43,13 +44,12 @@ public class CensoSocioeconômico {
                             menoridade = idade;
                         }
                         System.out.println("Qual seu Sexo(M / F): ");
-                        String sexo = ler.next();
+                        String sexo = ler.next().toUpperCase();
                         System.out.println("Qual o seu Salário: ");
                         double salario = ler.nextDouble();
                         somaSalarios = somaSalarios + salario;
-                        mediasalrial = somaSalarios / totalPessoas;
-                        if (sexo == "F" && salario >= 5.000){
-                            mulheresSalarioAlto = salario;
+                        if (sexo.equalsIgnoreCase("F") && salario >= 5000) {
+                            mulheresSalarioAlto++;
                         }
 
                         ler.nextLine();
@@ -69,7 +69,7 @@ public class CensoSocioeconômico {
 
                 }
                 case 2:{
-                    System.out.println("Média salarial do grupo"+ mediasalrial);
+                    System.out.println("Média salarial do grupo: " + (totalPessoas == 0 ? 0 : (somaSalarios / totalPessoas)));
 
                     System.out.println(" Maior idade registrada: "+ maiordiade);
                     System.out.println(" Menor idade registrada: " + (menoridade == 999 ? 0 : menoridade));

@@ -15,6 +15,7 @@ public class Pet {
         this.alimenteacao = alimenteacao;
     }
 
+
     public String getNome() {
         return nome;
     }
@@ -55,6 +56,7 @@ public class Pet {
         this.alimenteacao = alimenteacao;
     }
 
+
     @Override
     public String toString() {
         return "Pet{" +
@@ -67,4 +69,9 @@ public class Pet {
     }
 
 
+
+
+
+
+    
 }

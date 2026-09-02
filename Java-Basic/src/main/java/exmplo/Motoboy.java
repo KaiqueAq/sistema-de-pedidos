@@ -16,6 +16,7 @@ public class Motoboy extends Funcionario{
         this.cnh = cnh;
     }
 
+
     @Override
     public double getSalarioFinal() {
         return super.salarioBase;

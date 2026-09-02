@@ -3,8 +3,8 @@ package novo;
 public abstract class CargoDeConfinaca extends Funcionario{
     protected Bonificacao bonificacao;
 
-    public CargoDeConfinaca(String nome, String cpf, String dataNascimento, double salrioBase, SalarioFinal salarioFinal, Bonificacao bonificacao) {
-        super(nome, cpf, dataNascimento, salrioBase, salarioFinal);
+    public CargoDeConfinaca(String nome, String cpf, String dataNascimento, double salrioBase, Bonificacao bonificacao) {
+        super(nome, cpf, dataNascimento, salrioBase);
         this.bonificacao = bonificacao;
     }
 
@@ -24,7 +24,6 @@ public abstract class CargoDeConfinaca extends Funcionario{
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 ", salrioBase=" + salrioBase +
-                ", salarioFinal=" + salarioFinal +
                 '}';
     }
 }

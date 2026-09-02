@@ -3,8 +3,8 @@ package novo;
 public class Motoboy extends Funcionario{
     private String placaDaMoto;
 
-    public Motoboy(String nome, String cpf, String dataNascimento, double salrioBase, SalarioFinal salarioFinal, String placaDaMoto) {
-        super(nome, cpf, dataNascimento, salrioBase, salarioFinal);
+    public Motoboy(String nome, String cpf, String dataNascimento, double salrioBase, String placaDaMoto) {
+        super(nome, cpf, dataNascimento, salrioBase);
         this.placaDaMoto = placaDaMoto;
     }
 
@@ -17,6 +17,11 @@ public class Motoboy extends Funcionario{
     }
 
     @Override
+    public double obterSalarioFinal() {
+        return this.salrioBase;
+    }
+
+    @Override
     public String toString() {
         return "Motoboy{" +
                 "placaDaMoto='" + placaDaMoto + '\'' +
@@ -24,7 +29,7 @@ public class Motoboy extends Funcionario{
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 ", salrioBase=" + salrioBase +
-                ", salarioFinal=" + salarioFinal +
+                ", salarioFinal=" + this.obterSalarioFinal() +
                 '}';
     }
 }

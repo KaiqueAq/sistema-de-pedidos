@@ -5,14 +5,14 @@ public abstract class Funcionario implements SalarioFinal{
     protected String cpf;
     protected String dataNascimento;
     protected  double salrioBase;
-    protected SalarioFinal salarioFinal;
 
-    public Funcionario(String nome, String cpf, String dataNascimento, double salrioBase, SalarioFinal salarioFinal) {
+
+    public Funcionario(String nome, String cpf, String dataNascimento, double salrioBase) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.salrioBase = salrioBase;
-        this.salarioFinal = salarioFinal;
+
     }
 
 
@@ -48,13 +48,6 @@ public abstract class Funcionario implements SalarioFinal{
         this.salrioBase = salrioBase;
     }
 
-    public SalarioFinal getSalarioFinal() {
-        return salarioFinal;
-    }
-
-    public void setSalarioFinal(SalarioFinal salarioFinal) {
-        this.salarioFinal = salarioFinal;
-    }
 
 
     @Override
@@ -64,7 +57,7 @@ public abstract class Funcionario implements SalarioFinal{
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 ", salrioBase=" + salrioBase +
-                ", salarioFinal=" + salarioFinal +
+                ", salarioFinal=" +  +
                 '}';
     }
 }

@@ -1,6 +1,5 @@
 package Indutria;
 
-
 public class Motoboy extends Funcionario {
     private String cnh;
 

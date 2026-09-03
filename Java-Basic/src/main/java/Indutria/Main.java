@@ -25,7 +25,8 @@ public class Main {
                 Sexo.MASCULINO,
                 2333,
                 "30/14/1980",
-                "30/14/1980"
+                "30/14/1980",
+                Bonificacao.Gerente
         );
         Diretor diretor = new Diretor(
                 "Carlos",
@@ -34,7 +35,8 @@ public class Main {
                 Sexo.MASCULINO,
                 2333,
                 "30/14/1980",
-                "30/14/1980"
+                "30/14/1980",
+                Bonificacao.Diretor
         );
 
         // 3. Exibindo os dados iniciais dos funcionários utilizando o toString()

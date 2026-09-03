@@ -3,8 +3,9 @@ package Indutria;
 public abstract class CargoDeConfinaca extends Funcionario {
     protected Bonificacao bonificacao;
 
-    public CargoDeConfinaca(String nome, String cpf, String rg, Sexo sexo, double salrioBase, String dataNascimento, String dataAdmisao) {
+    public CargoDeConfinaca(String nome, String cpf, String rg, Sexo sexo, double salrioBase, String dataNascimento, String dataAdmisao, Bonificacao bonificacao) {
         super(nome, cpf, rg, sexo, salrioBase, dataNascimento, dataAdmisao);
+        this.bonificacao = bonificacao;
     }
 
 

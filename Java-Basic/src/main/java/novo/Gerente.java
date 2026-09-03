@@ -21,7 +21,7 @@ public class Gerente extends CargoDeConfinaca implements Contracacao{
 
     @Override
     public double obterSalarioFinal() {
-        return super.salrioBase * bonificacao.Gerente.getValor();
+        return super.salrioBase * bonificacao.getValor();
     }
 
     @Override

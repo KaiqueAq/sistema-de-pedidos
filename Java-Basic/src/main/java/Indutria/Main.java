@@ -1,19 +1,20 @@
-package novo;
+package Indutria;
 
-import exmplo.Diretor;
-import exmplo.Motoboy;
-import exmplo.Setor;
-import exmplo.Sexo;
+
+
+
 public class Main {
     public static void main(String[] args) {
         // 1. Criando uma instância de Motoboy
         Motoboy motoboy = new Motoboy(
                 "Carlos Silva",
                 "15/05/1995",
+                "67688787",
                 Sexo.MASCULINO,
-                Setor.FINANCEIRO,
-                2112,
-                "ABC-1234"
+                2333,
+                "30/14/1980",
+                "30/14/1980",
+                "AB"
         );
 
         // 2. Criando uma instância de Gerente (Cargo de Confiança com Bonificação de 30%)
@@ -21,28 +22,31 @@ public class Main {
                 "Ana Souza",
                 "987.654.321-11",
                 "20/10/1988",
-                62000.0,
-                Bonificacao.Gerente
+                Sexo.MASCULINO,
+                2333,
+                "30/14/1980",
+                "30/14/1980"
         );
-        Gerente diretor = new Gerente(
+        Diretor diretor = new Diretor(
                 "Carlos",
                 "887.754.931-11",
                 "30/14/1980",
-                62000.0,
-                Bonificacao.Diretor
+                Sexo.MASCULINO,
+                2333,
+                "30/14/1980",
+                "30/14/1980"
         );
 
         // 3. Exibindo os dados iniciais dos funcionários utilizando o toString()
         System.out.println("--- Dados dos Funcionários ---");
-        System.out.println(motoboy.toString());
-        System.out.println("Salário Final do Motoboy: R$ " + motoboy.getSalarioFinal());
+        System.out.println(motoboy);
         System.out.println();
 
-        System.out.println(gerente.toString());
+        System.out.println(gerente);
         System.out.println("Salário Final do Gerente: R$ " + gerente.obterSalarioFinal());
         System.out.println();
 
-        System.out.println(diretor.toString());
+        System.out.println(diretor);
         System.out.println("Salário Final do Gerente: R$ " + diretor.obterSalarioFinal());
         System.out.println();
 

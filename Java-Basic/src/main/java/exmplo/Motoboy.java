@@ -31,7 +31,6 @@ public class Motoboy extends Funcionario{
                 ", sexo=" + sexo +
                 ", setor=" + setor +
                 ", salarioBase=" + salarioBase +
-                ", salario Final=" + this.getSalarioFinal() +
                 '}';
     }
 }
